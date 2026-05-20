@@ -1,0 +1,15 @@
+export const dashboardStyles = {
+  card: 'bg-white border border-[#e2e6f0] rounded-xl overflow-hidden shadow-sm',
+  cardHeader: 'flex items-center justify-between px-4 py-3 border-b border-[#eef0f8] bg-gradient-to-r from-[#f8f9fd] to-white',
+  cardBody: 'p-4',
+  refBadge: 'px-2 py-0.5 rounded-md bg-[#1a5fa8] text-white text-[11px] font-bold',
+  refBadgeLight: 'px-2 py-0.5 rounded-md bg-[#e3eefb] text-[#1a5fa8] text-[10.5px] font-bold',
+  statusOk: 'inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-[#e8f5e9] text-[#2e7d32]',
+  sectionTitle: 'text-[13px] font-semibold text-[#1a2340]',
+  tableHeader: 'px-2.5 py-2 text-left text-[10.5px] text-[#777] font-semibold uppercase tracking-wide border-b border-[#e8eaf6] whitespace-nowrap',
+  tableCell: 'px-2.5 py-2 border-b border-[#f0f3fb]',
+  btnPrimary: 'bg-[#1a5fa8] text-white px-3.5 py-[7px] rounded-lg text-[12.5px] flex items-center gap-1.5 font-medium whitespace-nowrap hover:bg-[#154c86] transition-colors',
+  btnSecondary: 'bg-white text-[#555] border border-[#d5d9ed] px-3 py-[7px] rounded-lg text-[12.5px] flex items-center gap-1.5 whitespace-nowrap hover:bg-[#f8f9fc] transition-colors',
+  select: 'border border-[#d5d9ed] rounded-lg px-2.5 py-[7px] text-[12.5px] text-[#333] bg-[#f9fafc] outline-none w-full appearance-none',
+  divider: 'w-px h-8 bg-[#e8eaf0]',
+};
