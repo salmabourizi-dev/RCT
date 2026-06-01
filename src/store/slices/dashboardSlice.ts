@@ -1,7 +1,8 @@
-import type { ActiveView, DashboardState, Operation } from '../../types';
+import type { ActiveView, DashboardState, Operation, UserRole } from '../../types';
 
 export type DashboardAction =
   | { type: 'SET_VIEW'; payload: ActiveView }
+  | { type: 'SET_ROLE'; payload: UserRole }
   | { type: 'SET_CTRL_TAB'; payload: number }
   | { type: 'SET_PLANNING_FILTER'; payload: string }
   | { type: 'SET_PLANNING_STATUS_SELECT'; payload: string }
@@ -24,6 +25,7 @@ export const initialState: DashboardState = {
   cotation: 0,
   formStatut: 'Signée',
   formResultat: 'OK',
+  role: 'CCO',
 };
 
 export function dashboardReducer(state: DashboardState, action: DashboardAction): DashboardState {
@@ -48,6 +50,8 @@ export function dashboardReducer(state: DashboardState, action: DashboardAction)
       return { ...state, formStatut: action.payload };
     case 'SET_FORM_RESULTAT':
       return { ...state, formResultat: action.payload };
+    case 'SET_ROLE':
+      return { ...state, role: action.payload };
     case 'OPEN_EDIT_FORM':
       return {
         ...state,

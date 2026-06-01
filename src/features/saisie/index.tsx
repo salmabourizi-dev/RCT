@@ -36,6 +36,10 @@ export function SaisieFormFeature() {
 
   const isVirement = selectedOperation.type.toLowerCase().includes('virement');
 
+  function setSignatureFragile(arg0: (prev: any) => boolean) {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <div data-testid="view-saisie-form">
       <div className="flex items-center gap-3 mb-5">

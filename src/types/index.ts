@@ -1,4 +1,16 @@
-export type ActiveView = 'home' | 'saisie' | 'planning' | 'saisie-form' | 'saisie-anomalies';
+export type ActiveView =
+  | 'home'
+  | 'saisie'
+  | 'planning'
+  | 'saisie-form'
+  | 'saisie-anomalies'
+  | 'statistiques'
+  | 'suivi-investigations'
+  | 'suivi-docs'
+  | 'supervision-cc'
+  | 'supervision-da';
+
+export type UserRole = 'CCO' | 'SUPERVISEUR';
 
 export interface Operation {
   n: number;
@@ -60,4 +72,5 @@ export interface DashboardState {
   cotation: number;
   formStatut: string;
   formResultat: string;
+  role: UserRole;
 }

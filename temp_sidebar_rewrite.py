@@ -1,4 +1,6 @@
-import { ChevronRight } from 'lucide-react';
+from pathlib import Path
+path = Path('src/app/components/layout/Sidebar.tsx')
+content = '''import { ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import { useLocation } from 'wouter';
 import { NavItem } from '../core';
@@ -156,3 +158,6 @@ export function Sidebar({ activeView, role, sidebarOpen, onToggleSidebar, onSetV
     </aside>
   );
 }
+'''
+path.write_text(content, encoding='utf-8')
+print('rewritten')

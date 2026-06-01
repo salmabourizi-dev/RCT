@@ -2,11 +2,12 @@ import type { ReactNode } from 'react';
 import { AppHeader } from './AppHeader';
 import { Sidebar } from './Sidebar';
 import cdmLogo from '@assets/cdm.png';
-import type { ActiveView } from '../../../types';
+import type { ActiveView, UserRole } from '../../../types';
 
 interface AppLayoutProps {
   children: ReactNode;
   activeView: ActiveView;
+  role: UserRole;
   sidebarOpen: boolean;
   onToggleSidebar: () => void;
   onSetView: (view: ActiveView) => void;
@@ -15,6 +16,7 @@ interface AppLayoutProps {
 export function AppLayout({
   children,
   activeView,
+  role,
   sidebarOpen,
   onToggleSidebar,
   onSetView,
@@ -25,6 +27,7 @@ export function AppLayout({
       <div className="flex flex-1 overflow-hidden">
         <Sidebar
           activeView={activeView}
+          role={role}
           sidebarOpen={sidebarOpen}
           onToggleSidebar={onToggleSidebar}
           onSetView={onSetView}
@@ -38,7 +41,7 @@ export function AppLayout({
           </div>
           <div className="px-4 py-2.5 border-t border-[#ebebf0] shrink-0 bg-white/60 backdrop-blur-sm flex items-center justify-center gap-2 opacity-50">
             <img src={cdmLogo} alt="CDM" className="h-4 w-auto object-contain grayscale" />
-            <span className="text-[10px] text-[#bbb]">Crédit du Maroc © 2024 v1.0</span>
+            <span className="text-[10px] text-[#bbb]">Crédit du Maroc © 2026 v1.0</span>
           </div>
         </div>
       </div>
