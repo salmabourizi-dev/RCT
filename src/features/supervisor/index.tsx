@@ -3,6 +3,7 @@ import { ClipboardList, FileSearch, Layers, ShieldCheck, TrendingUp, Undo2 } fro
 import type { ActiveView } from '../../types';
 import { SupervisionCC } from './SupervisionCC';
 import { SuiviRetours } from './SuiviRetours';
+import { SuiviAnomalies } from './SuiviAnomalies';
 
 const supervisorLabels: Record<ActiveView, { title: string; description: string; icon: ComponentType<any> }> = {
   statistiques: {
@@ -48,6 +49,9 @@ export function SupervisorFeature({ view }: { view: ActiveView }) {
   }
   if (view === 'suivi-retours') {
     return <SuiviRetours />;
+  }
+  if (view === 'suivi-investigations') {
+    return <SuiviAnomalies />;
   }
 
   const entry = supervisorLabels[view];
