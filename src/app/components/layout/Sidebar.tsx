@@ -20,11 +20,10 @@ interface SidebarProps {
 }
 
 const supervisorItems: { label: string; view: ActiveView }[] = [
-  { label: 'Statistiques', view: 'statistiques' },
-  { label: 'Suivi Investigation des CC', view: 'suivi-investigations' },
-  { label: 'Suivi DOC Non repris', view: 'suivi-docs' },
   { label: 'Supervision CC', view: 'supervision-cc' },
-  { label: 'Supervision fiche DA', view: 'supervision-da' },
+  { label: 'Suivi des retours', view: 'suivi-retours' },
+  { label: 'Suivi des anomalies', view: 'suivi-investigations' },
+  { label: 'Suivi DOC Non repris', view: 'suivi-docs' },
 ];
 
 const caissesActive = (view: ActiveView) =>
@@ -59,9 +58,11 @@ export function Sidebar({ activeView, role, sidebarOpen, onToggleSidebar, onSetV
           data-testid="nav-caisses"
         >
           <NavIconCaisses />
-          <span className="flex-1 leading-tight">caisses comptables</span>
+          <span className="flex-1 leading-tight">Caisses comptables</span>
           <ChevronRight
-            className={`w-3.5 h-3.5 shrink-0 text-[#9aa8bc] transition-transform duration-200 ${sidebarOpen ? 'rotate-90' : ''}`}
+            className={`w-3.5 h-3.5 shrink-0 text-[#9aa8bc] transition-transform duration-200 ${
+              sidebarOpen ? 'rotate-90' : ''
+            }`}
           />
         </div>
 
@@ -114,7 +115,9 @@ export function Sidebar({ activeView, role, sidebarOpen, onToggleSidebar, onSetV
               <NavIconContrat />
               <span className="flex-1 leading-tight">Contrats TAREC</span>
               <ChevronRight
-                className={`w-3.5 h-3.5 shrink-0 text-[#9aa8bc] transition-transform duration-200 ${tarecOpen ? 'rotate-90' : ''}`}
+                className={`w-3.5 h-3.5 shrink-0 text-[#9aa8bc] transition-transform duration-200 ${
+                  tarecOpen ? 'rotate-90' : ''
+                }`}
               />
             </div>
 

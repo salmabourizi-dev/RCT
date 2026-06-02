@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Globe2, Mail, User, ShieldCheck } from 'lucide-react';
+import { Globe2, Mail, User } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useDashboard } from '../../hooks/useDashboard';
 import type { UserRole } from '../../types';

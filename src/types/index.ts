@@ -8,7 +8,8 @@ export type ActiveView =
   | 'suivi-investigations'
   | 'suivi-docs'
   | 'supervision-cc'
-  | 'supervision-da';
+  | 'supervision-da'
+  | 'suivi-retours';
 
 export type UserRole = 'CCO' | 'SUPERVISEUR';
 

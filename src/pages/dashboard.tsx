@@ -24,7 +24,7 @@ export default function DashboardPage() {
       {activeView === 'saisie-form' && <SaisieFormFeature />}
       {activeView === 'planning' && <PlanningFeature />}
       {activeView === 'saisie-anomalies' && <SaisieAnomaliesFeature />}
-      {['statistiques', 'suivi-investigations', 'suivi-docs', 'supervision-cc', 'supervision-da'].includes(activeView) && (
+      {['statistiques', 'suivi-investigations', 'suivi-docs', 'supervision-cc', 'supervision-da', 'suivi-retours'].includes(activeView) && (
         <SupervisorFeature view={activeView} />
       )}
     </AppLayout>
